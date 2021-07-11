@@ -80,6 +80,8 @@
     }
     .info {
         width: 50%;
-        padding: 10px;
+    }
+    .about {
+        height: 100vh;
     }
 }
