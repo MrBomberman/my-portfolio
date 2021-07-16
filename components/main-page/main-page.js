@@ -6,10 +6,7 @@ import imageOfAuthor from '../../assets/images/personalblog.png'
 
 export default function MainPage(){
 
-
-  
-
-    return (
+  return (
         <> 
       <div className={classes.header}>
         <div className={classes.author}>
@@ -34,7 +31,7 @@ export default function MainPage(){
                 height={400}
                 className={classes.image}/>
         </div>
-        <div className={`${classes.info} ${classes.slideIn}`}>
+        <div className={`${classes.info} ${classes.slideIn} ${classes.descr}`}>
           <p>My name is Kirill. I am from Moscow. Recently graduated from the Moscow State Linguistic University. I started doing web development more than six months ago, I am studying, creating my own projects, I have completed several courses. About my projects below</p>
         </div>
       </div>
