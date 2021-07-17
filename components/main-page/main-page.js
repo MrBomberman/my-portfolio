@@ -40,19 +40,27 @@ export default function MainPage(){
       </div>
       <div id='projects' className={classes.projects}>
           <h2>You can see some of my projects</h2>
-          <div>
-              <div>
+          <div className={classes.projectsGrid}>
+              <div className={classes.slideGrid}>
               <Image src={sliderImage}
                 alt="Picture of the author"
                 width={400}
                 height={400}
                 className={classes.sliderImg}/>
               </div>
-              <div>
-
+              <div className={classes.slideGrid}> 
+              <Image src={sliderImage}
+                alt="Picture of the author"
+                width={400}
+                height={400}
+                className={classes.sliderImg}/>
               </div>
-              <div>
-
+              <div className={classes.slideGrid}>
+              <Image src={sliderImage}
+                alt="Picture of the author"
+                width={400}
+                height={400}
+                className={classes.sliderImg}/>
               </div>
           </div>
       </div>
