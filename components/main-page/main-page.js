@@ -41,27 +41,37 @@ export default function MainPage(){
       <div id='projects' className={classes.projects}>
           <h2>You can see some of my projects</h2>
           <div className={classes.projectsGrid}>
-              <div className={classes.slideGrid}>
+            <Link href='/sliders'>
+            <a className={classes.slideGrid}>
+              <Image src={sliderImage}
+                alt="Picture of the author"
+                width={400}
+                height={400}
+                className={classes.sliderImg}
+                />
+                <p className={classes.sliderDescr}>Sliders</p>
+              </a>
+              </Link>
+              <Link href='/game'>
+              <a className={classes.slideGrid}> 
               <Image src={sliderImage}
                 alt="Picture of the author"
                 width={400}
                 height={400}
                 className={classes.sliderImg}/>
-              </div>
-              <div className={classes.slideGrid}> 
+                <p className={classes.sliderDescr}>Game</p>
+              </a>
+              </Link>
+              <Link href='/features'>
+              <a className={classes.slideGrid}>
               <Image src={sliderImage}
                 alt="Picture of the author"
                 width={400}
                 height={400}
                 className={classes.sliderImg}/>
-              </div>
-              <div className={classes.slideGrid}>
-              <Image src={sliderImage}
-                alt="Picture of the author"
-                width={400}
-                height={400}
-                className={classes.sliderImg}/>
-              </div>
+                <p className={classes.sliderDescr}>CSS variables</p>
+              </a>
+              </Link>
           </div>
       </div>
         </>
