@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image'
 import classes from './main-page.module.css'
 import imageOfAuthor from '../../assets/images/personalblog.png';
-import sliderImage from '../../assets/images/slider.jpg'
+import sliderImage from '../../assets/images/slider.jpg';
+import variables from '../../assets/images/variables.jpg';
+import gamePic from '../../assets/images/game.jpg';
 
 export default function MainPage(){
 
@@ -54,7 +56,7 @@ export default function MainPage(){
               </Link>
               <Link href='/game'>
               <a className={classes.slideGrid}> 
-              <Image src={sliderImage}
+              <Image src={gamePic}
                 alt="Picture of the author"
                 width={400}
                 height={400}
@@ -64,7 +66,7 @@ export default function MainPage(){
               </Link>
               <Link href='/features'>
               <a className={classes.slideGrid}>
-              <Image src={sliderImage}
+              <Image src={variables}
                 alt="Picture of the author"
                 width={400}
                 height={400}
@@ -73,6 +75,7 @@ export default function MainPage(){
               </a>
               </Link>
           </div>
+          <button className={classes.styleBtn}>Show more</button>
       </div>
         </>
     )
