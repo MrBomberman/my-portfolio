@@ -77,7 +77,7 @@ export default function MainPage(){
           <button className={classes.styleBtn}>Show more</button>
       </div>
       <div id='contact' className={classes.contact}>
-        <h1>Let's create something together :) </h1>
+        <h1>Let&rsquo;s create something together :) </h1>
         <p>My contacts</p>
         <div className={classes.contactLinks}>
           <div>
@@ -86,7 +86,6 @@ export default function MainPage(){
           </Link>
           </div>
           <div>
-          <i class="fab fa-github"></i>
           <Link href='https://github.com/MrBomberman' passHref={true}>
             <Button>GitHub</Button>
           </Link>
