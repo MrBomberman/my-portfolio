@@ -5,7 +5,7 @@ export default function ErrorPage(){
     return (
         <>
         <div className={classes.container}>
-        <h1 className={classes.error}>Error 404</h1>
+        <h1 className={classes.error}>Oops, I haven't write this page yet :) </h1>
         <p>Please <Link href='/'><a className={classes.error}>go to the main page</a></Link></p>
         </div>
         </>
