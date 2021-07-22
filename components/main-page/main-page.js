@@ -1,15 +1,14 @@
 import Link from 'next/link';
-import Head from 'next/head';
 import Image from 'next/image'
+import { Button } from 'semantic-ui-react';
 import classes from './main-page.module.css'
 import imageOfAuthor from '../../assets/images/personalblog.png';
 import sliderImage from '../../assets/images/slider.jpg';
 import variables from '../../assets/images/variables.jpg';
 import gamePic from '../../assets/images/game.jpg';
 
+
 export default function MainPage(){
-
-
 
   return (
         <> 
@@ -76,6 +75,28 @@ export default function MainPage(){
               </Link>
           </div>
           <button className={classes.styleBtn}>Show more</button>
+      </div>
+      <div id='contact' className={classes.contact}>
+        <h1>Let's create something together :) </h1>
+        <p>My contacts</p>
+        <div className={classes.contactLinks}>
+          <div>
+          <Link href='https://t.me/MrBomberman' passHref={true}>
+            <Button>Telegram</Button>
+          </Link>
+          </div>
+          <div>
+          <i class="fab fa-github"></i>
+          <Link href='https://github.com/MrBomberman' passHref={true}>
+            <Button>GitHub</Button>
+          </Link>
+          </div>
+          <div>
+          <Link href='https://twitter.com/Kirill98711794' passHref={true}>
+            <Button>Twitter</Button>
+          </Link>
+          </div>
+        </div>
       </div>
         </>
     )
