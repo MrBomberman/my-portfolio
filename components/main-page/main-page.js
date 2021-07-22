@@ -77,7 +77,7 @@ export default function MainPage(){
           <button className={classes.styleBtn}>Show more</button>
       </div>
       <div id='contact' className={classes.contact}>
-        <h1>Let&rsquo;s create something together :) </h1>
+        <h1>Let&rsquo;s create something together! </h1>
         <p>My contacts</p>
         <div className={classes.contactLinks}>
           <div>
