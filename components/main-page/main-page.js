@@ -63,14 +63,14 @@ export default function MainPage(){
                 <p className={classes.sliderDescr}>Game</p>
               </a>
               </Link>
-              <Link href='/features'>
+              <Link href='/js30'>
               <a className={classes.slideGrid}>
               <Image src={variables}
                 alt="Picture of the author"
                 width={400}
                 height={400}
                 className={classes.sliderImg}/>
-                <p className={classes.sliderDescr}>CSS variables</p>
+                <p className={classes.sliderDescr}>JS_30</p>
               </a>
               </Link>
           </div>
