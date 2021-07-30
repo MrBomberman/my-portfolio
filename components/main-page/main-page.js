@@ -82,17 +82,17 @@ export default function MainPage(){
         <div className={classes.contactLinks}>
           <div>
           <Link href='https://t.me/MrBomberman' passHref={true}>
-            <Button>Telegram</Button>
+            <Button><i className="fab fa-telegram"></i>Telegram</Button>
           </Link>
           </div>
           <div>
           <Link href='https://github.com/MrBomberman' passHref={true}>
-            <Button>GitHub</Button>
+            <Button><i className="fab fa-github"></i>GitHub</Button>
           </Link>
           </div>
           <div>
           <Link href='https://twitter.com/Kirill98711794' passHref={true}>
-            <Button>Twitter</Button>
+            <Button><i className="fab fa-twitter-square"></i>Twitter</Button>
           </Link>
           </div>
         </div>
