@@ -9,6 +9,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.css" rel="stylesheet"/>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.css' rel='stylesheet'/> 
         </Head>
         <body>
           <Main />
