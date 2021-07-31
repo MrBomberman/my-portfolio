@@ -40,11 +40,11 @@ class Clock extends Component{
         <div className={classes.container}>
             <div className={classes.clock}>
                 <div className={classes.clockFace}>
-                <div className={classes.hand} ref={this.clockHour}>
+                <div className={classes.handHour} ref={this.clockHour}>
                 </div>
-                <div className={classes.hand} ref={this.clockMin}>
+                <div className={classes.handMin} ref={this.clockMin}>
                 </div>
-                <div className={classes.hand} ref={this.clockSec}>
+                <div className={classes.handSec} ref={this.clockSec}>
                 </div>
                 </div>
             </div>
