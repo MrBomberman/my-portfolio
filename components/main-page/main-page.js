@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import { Button } from 'semantic-ui-react';
 import classes from './main-page.module.css'
 import imageOfAuthor from '../../assets/images/personalblog.png';

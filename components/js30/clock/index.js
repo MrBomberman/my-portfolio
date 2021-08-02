@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import NavLayout from '../../layouts/nav-layout';
 import classes from './clock.module.css';
 
 class Clock extends Component{
@@ -37,6 +38,7 @@ class Clock extends Component{
         
     return (
         <> 
+        <NavLayout linkText='Project page' link='/js30'>
         <div className={classes.container}>
             <div className={classes.clock}>
                 <div className={classes.clockFace}>
@@ -49,6 +51,7 @@ class Clock extends Component{
                 </div>
             </div>
         </div>
+        </NavLayout>
         </>
     )
     }

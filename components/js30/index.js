@@ -1,9 +1,11 @@
 import Link from "next/link";
 import classes from './js30.module.css';
+import NavLayout from "../layouts/nav-layout";
 
 function Js30(){
     return (
         <>
+        <NavLayout linkText='Home page' link='/'>
         <div className={classes.container}>
             <h1 className={classes.title}>You can see some interesting projects from coding challenge (JS_30)</h1>
             <div className={classes.content}>
@@ -11,8 +13,8 @@ function Js30(){
                     <Link href='/js30/clock'><p className={classes.projectBtn}>Go to see clock</p></Link>
                 </div>
             </div>
-            <Link href='/'><p>Go to the main page</p></Link>
         </div>
+        </NavLayout>
         </>
     )
 }
