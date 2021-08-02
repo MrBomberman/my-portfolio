@@ -43,12 +43,12 @@
     transition-timing-function: cubic-bezier(.15,1,.89,.12);
 }
 .handHour {
-    width: 45%;
-    height: 7px;
+    width: 50%;
+    height: 8px;
     background: black;
     position: absolute;
-    top: 51%;
-    transform-origin: 105%;
+    top: 50%;
+    transform-origin: 100%;
     transform: rotate(90deg);
     transition-timing-function: cubic-bezier(.15,1,.89,.12);
 }
