@@ -74,7 +74,9 @@ export default function MainPage(){
               </a>
               </Link>
           </div>
-          <button className={classes.styleBtn}>Show more</button>
+          <Link href='/all-projects'>
+          <a className={classes.styleBtn}>Show more</a>
+          </Link>
       </div>
       <div id='contact' className={classes.contact}>
         <h1>Let&rsquo;s create something together! </h1>
