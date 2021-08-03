@@ -8,6 +8,7 @@ class Clock extends Component{
         this.clockSec = React.createRef();
         this.clockMin = React.createRef();
         this.clockHour = React.createRef();
+        this.state = {loading: true};
     }
 
     setDate() {
@@ -31,29 +32,40 @@ class Clock extends Component{
     }
       
 
+
+    
     render(){
-        // setInterval(this.setDate, 1000)
+        // if(this.loading){
+        // return (
+        //     <>
+        //     <NavLayout linkText='Project page' link='/js30'>
+        //     <div className={classes.loader}>Loading...</div>
+        //     </NavLayout>
+        //     </>
+        // )
+        // } 
+            return (
+                <> 
+                <NavLayout linkText='Project page' link='/js30'>
+                <div className={classes.container}>
+                    <div className={classes.clock}>
+                        <div className={classes.clockFace}>
+                        <div className={classes.handHour} ref={this.clockHour}>
+                        </div>
+                        <div className={classes.handMin} ref={this.clockMin}>
+                        </div>
+                        <div className={classes.handSec} ref={this.clockSec}>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </NavLayout>
+                </>
+            )
         
 
-        
-    return (
-        <> 
-        <NavLayout linkText='Project page' link='/js30'>
-        <div className={classes.container}>
-            <div className={classes.clock}>
-                <div className={classes.clockFace}>
-                <div className={classes.handHour} ref={this.clockHour}>
-                </div>
-                <div className={classes.handMin} ref={this.clockMin}>
-                </div>
-                <div className={classes.handSec} ref={this.clockSec}>
-                </div>
-                </div>
-            </div>
-        </div>
-        </NavLayout>
-        </>
-    )
+
+
     }
 }
 
