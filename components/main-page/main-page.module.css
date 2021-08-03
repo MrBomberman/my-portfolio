@@ -8,6 +8,7 @@
     position: fixed;
     width: 100%;
     z-index: 1;
+    height: 65px;
 }
 .navbar {
     display: flex;
@@ -193,5 +194,8 @@
     }
     .projects h2 {
         font-size: 25px;
+    }
+    .header {
+        height: 50px;
     }
 }
