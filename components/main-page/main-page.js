@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from 'semantic-ui-react';
-import classes from './main-page.module.css'
+import classes from './main-page.module.scss'
 import imageOfAuthor from '../../assets/images/personalblog.png';
 import sliderImage from '../../assets/images/slider.jpg';
 import variables from '../../assets/images/variables.jpg';
@@ -11,7 +11,7 @@ import gamePic from '../../assets/images/game.jpg';
 export default function MainPage(){
 
   return (
-        <> 
+    <div className={classes.mainClass}> 
       <div className={classes.header}>
         <div className={classes.author}>
           <a href='#author'>KirIsakov.com</a></div>
@@ -23,8 +23,21 @@ export default function MainPage(){
         </div>
       </div>
       <section className={classes.welcomeSection} id='author'>
+      <div className={classes.bubbles}>
+        <div className={classes.nameOfAuthor}>
         <h1>Hello! I am Kirill Isakov</h1>
         <p>Junior fronted-developer</p>
+        </div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+        </div>
       </section>
 
       <div id='about' className={classes.about}>
@@ -99,6 +112,6 @@ export default function MainPage(){
           </div>
         </div>
       </div>
-        </>
+    </div>
     )
 }
