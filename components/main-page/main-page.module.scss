@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.mainClass {
+    font-size:calc(22px + 16 * ((100vw - 320px) / (1280 - 320)));;
+}
+.header {
+    background-color:  darkred;
+    background-color: #cc2936;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 65px;
+}
+.navbar {
+    display: flex;
+    width: 40vw;
+    justify-content: flex-end;
+}
+.header a {
+    margin: 0;
+    padding: 15px;
+    font-size: 25px;
+    display: block;
+    transition: 1s;
+    text-shadow: 3px 2px 2px rgba(150, 150, 150, 1);
+}
+.welcomeSection h1 {
+    font-size: 35px;
+    color: white;
+    margin: 5px;
+  }
+.welcomeSection p {
+    color: rgb(213, 34, 54);
+    font-size: 27px;
+    font-style: italic;
+    margin: 1px;
+}
+.author {
+    width: 60vw
+}
+.nameOfAuthor {
+    position: absolute;
+    top: 280px;
+    left: 275px;
+}
+.welcomeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background-color:#1a1e23;
+  }
+  
+  $bubble-count: 50;
+  $sway-type: "sway-left-to-right", "sway-right-to-left";
+  
+  @function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }
+  
+  @function sample($list) {
+    @return nth($list, random(length($list)));
+  }
+  
+  .bubbles {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    left: var(--bubble-left-offset);
+    bottom: 0%;
+    display: block;
+    width: var(--bubble-radius);
+    height: var(--bubble-radius);
+    border-radius: 50%;
+    animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(183, 94%, 76%, 0.3);
+      border-radius: inherit;
+      animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+    }
+  
+    @for $i from 0 through $bubble-count {
+      &:nth-child(#{$i}) {
+        --bubble-left-offset: #{random_range(0vw, 100vw)};
+        --bubble-radius: #{random_range(1vw, 10vw)};
+        --bubble-float-duration: #{random_range(6s, 12s)};
+        --bubble-sway-duration: #{random_range(4s, 6s)};
+        --bubble-float-delay: #{random_range(0s, 4s)};
+        --bubble-sway-delay: #{random_range(0s, 4s)};
+        --bubble-sway-type: #{sample($sway-type)};
+      }
+    }
+  }
+  
+  @keyframes float-up {
+    to {
+      transform: translateY(-175vh);
+    }
+  }
+  
+  @keyframes sway-left-to-right {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes sway-right-to-left {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+//   about section
+.about {
+    background-color: #a49e8d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all .5s;
+}
+.imageMain {
+    border-radius: 50%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.info {
+   width: 45%;
+   padding: 20px;
+   font-size: 0.9em;
+}
+.info p {
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    // transform: skew(-15deg);
+    // padding: 10px;
+    // background-color: #244b6b;
+    // color: white;
+    // width: 10em;
+}
+.descr {
+    max-height: 550px;
+}
+.slideIn {
+    opacity: 1;
+    transition: all .5s;
+}
+.slideIn.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+.navbar > a:first-child:hover {
+    background-color: #a49e8d;
+}
+.navbar > a:nth-child(2):hover {
+    background-color: #40798c;
+}
+.projects {
+    text-align: center;
+    background-color: #40798c;
+    padding: 60px;
+}
+.projects h2 {
+    margin-top: 0;
+    font-size: 35px;
+    color: white;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    margin-bottom: 6rem;
+}
+.sliderImg {
+    object-fit: cover;
+    display: block;
+}
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    grid-gap: 35px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.slideGrid {
+    box-shadow: 0px 4px 19px 0px rgba(34, 60, 80, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.sliderDescr {
+    background-color: #2e608a;
+    text-align: center;
+    margin: 0;
+    padding: 20px 5px;
+    transition: 1s;
+}
+.slideGrid p:hover {
+    background-color: #244b6b;
+}
+.styleBtn {
+    background-color: #2e608a;
+    padding: 15px;
+    border-radius: 50%;
+    transition: all 1s;
+    box-shadow: 4px 4px 23px 0px rgba(140, 151, 159, 0.2);
+    font-size: 15px;
+    color: white;
+}
+.styleBtn:hover{
+    background-color: #244b6b;
+    padding: 15px 80px;
+
+}
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #574d68;
+    padding: 30px;
+    text-align: center;
+    height: 50vh;
+}
+.contact p, 
+.contact h1 {
+    color: white;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+.contact p {
+    font-size: 22px;
+}
+.contactLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.contactLinks div {
+    padding: 20px;
+    transition: 0.5s ease-out;
+}
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    padding: 2px;
+}
+.contactLinks div:hover{
+    padding: 20px 20px 0 20px
+}
+// .parallelogram {
+//     width: 150px;
+//     height: 100px;
+//     transform: skew(20deg);
+//     background: red;
+// }
+@media only screen and (max-width: 820px) {
+    .header a {
+        font-size: 15px
+    }
+    .author {
+        width: 30%
+    }
+    .navbar {
+        width: 70%;
+    }
+    .info {
+        width: 50%;
+    }
+    .welcomeSection h1 {
+        font-size: 25px;
+    }
+    .projects h2 {
+        font-size: 25px;
+    }
+    .header {
+        height: 50px;
+    }
+    .nameOfAuthor {
+        top: 340px;
+        left: 50px;
+    }
+}
