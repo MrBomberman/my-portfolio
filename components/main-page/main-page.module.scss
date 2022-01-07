@@ -42,8 +42,9 @@
 }
 .nameOfAuthor {
     position: absolute;
-    top: 280px;
-    left: 275px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 .welcomeSection {
     display: flex;
@@ -295,9 +296,5 @@
     }
     .header {
         height: 50px;
-    }
-    .nameOfAuthor {
-        top: 340px;
-        left: 50px;
     }
 }

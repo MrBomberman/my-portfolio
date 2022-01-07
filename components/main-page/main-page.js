@@ -23,11 +23,11 @@ export default function MainPage(){
         </div>
       </div>
       <section className={classes.welcomeSection} id='author'>
-      <div className={classes.bubbles}>
-        <div className={classes.nameOfAuthor}>
+      <div className={classes.nameOfAuthor}>
         <h1>Hello! I am Kirill Isakov</h1>
         <p>Junior fronted-developer</p>
         </div>
+      <div className={classes.bubbles}>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
