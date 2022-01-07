@@ -37,6 +37,8 @@ export default function MainPage(){
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
         </div>
       </section>
 
