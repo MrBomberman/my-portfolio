@@ -10,6 +10,7 @@
     "mock": "json-server -w db.json -p 4300 -d 1550"
   },
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
     "next": "11.0.1",
     "nextjs-progressbar": "^0.0.11",
     "react": "17.0.2",

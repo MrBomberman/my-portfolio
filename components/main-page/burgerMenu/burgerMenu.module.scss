@@ -1,0 +1,45 @@
+.burgerMenu {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.3s;
+}
+.activeBurgerMenu {
+    transform: translateX(0);
+    position: fixed;
+    height: 100vh;
+    top: 50px;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s;
+    font-size: 18px;
+}
+.blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+}
+
+.linksList {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    ul {
+        text-align: left;
+        padding: 20px;
+    }
+    li:before {
+        content: '- ';
+        color: #fff;
+    }
+    li {
+        padding: 10px 0;
+    }
+}
+
+.burgerHeader {
+    color: #fff;
+    padding: 10px;
+}

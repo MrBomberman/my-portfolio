@@ -6,9 +6,15 @@ import imageOfAuthor from '../../assets/images/personalblog.png';
 import sliderImage from '../../assets/images/slider.jpg';
 import variables from '../../assets/images/variables.jpg';
 import gamePic from '../../assets/images/game.jpg';
+import BurgerMenu from './burgerMenu/burgerMenu';
+import { useState } from 'react';
 
 
 export default function MainPage(){
+
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const items = ['about', 'projects', 'contact']
 
   return (
     <div className={classes.mainClass}> 
@@ -17,10 +23,14 @@ export default function MainPage(){
           <a href='#author'>KirIsakov.com</a></div>
         
         <div className={classes.navbar}>
+          <div className={classes.navMenuBtn} onClick={() => setActiveMenu(!activeMenu)}>
+          <span/>
+          </div>
         <a href='#about' >About</a>
         <a href='#projects'>Projects</a>
         <a href='#contact'>Contact</a>
         </div>
+        
       </div>
       <section className={classes.welcomeSection} id='author'>
       <div className={classes.nameOfAuthor}>
@@ -39,7 +49,9 @@ export default function MainPage(){
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
         </div>
+        <BurgerMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} header={'KirIsakov.com'} links={items}/>
       </section>
 
       <div id='about' className={classes.about}>
