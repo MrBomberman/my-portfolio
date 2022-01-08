@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import classes from './burgerMenu.module.scss';
 
-export default function BurgerMenu({header,links, activeMenu, setActiveMenu}){
+export default function BurgerMenu({header,links, activeMenu, setActiveMenu,activeTab}){
+
+
+    useEffect(() => {
+        console.log(activeTab.current.checked)
+    })
+
     return (
         <div className={activeMenu == true ? classes.activeBurgerMenu : classes.burgerMenu} >
             <div className={classes.linksList}>
@@ -9,7 +16,11 @@ export default function BurgerMenu({header,links, activeMenu, setActiveMenu}){
                     {links.map(link => {
                             return (
                             <li key={link}>
-                                <a href={`#${link}`} onClick={() => setActiveMenu(false)}>{link}</a>
+                                <a href={`#${link}`} onClick={() => {
+                                    setActiveMenu(false)
+                                    activeTab.current.checked = false;
+                                }
+                                }>{link}</a>
                             </li>
                         )
                     })}
