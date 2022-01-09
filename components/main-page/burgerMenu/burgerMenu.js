@@ -5,7 +5,7 @@ export default function BurgerMenu({header,links, activeMenu, setActiveMenu,acti
 
 
     useEffect(() => {
-        console.log(activeTab.current.checked)
+        activeTab.current.checked
     })
 
     return (
