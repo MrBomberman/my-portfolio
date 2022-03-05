@@ -16,7 +16,7 @@ export default function MainPage(){
   const burgerBtn = useRef();
 
 
-  const items = ['about', 'projects', 'contact']
+  const items = ['About', 'Projects', 'Contact']
 
   return (
     <div className={classes.mainClass}> 
@@ -59,7 +59,7 @@ export default function MainPage(){
           <div className={classes.bubble}></div>
         </div>
         <BurgerMenu activeTab={burgerBtn} activeMenu={activeMenu} 
-        setActiveMenu={setActiveMenu} header={'KirIsakov.com'} links={items}/>
+        setActiveMenu={setActiveMenu} links={items}/>
       </section>
 
       <div id='about' className={classes.about}>
