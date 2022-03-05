@@ -71,7 +71,7 @@ export default function MainPage(){
                 className={classes.imageMain}/>
         </div>
         <div className={`${classes.info} ${classes.slideIn} ${classes.descr}`}>
-          <p>My name is Kirill. I am from Moscow. Recently graduated from the Moscow State Linguistic University. I started doing web development more than six months ago, I am studying, creating my own projects, I have completed several courses. About my projects below</p>
+          <p>My name is Kirill. I am from Moscow. Recently graduated from the Moscow State Linguistic University. I started doing web development more than a year ago, I am studying, creating my own projects, I have completed several courses. Now I am working as fronted dev in Delta Car. About my projects below</p>
         </div>
       </div>
       <div id='projects' className={classes.projects}>
