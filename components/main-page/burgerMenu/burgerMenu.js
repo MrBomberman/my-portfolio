@@ -11,7 +11,7 @@ export default function BurgerMenu({header,links, activeMenu, setActiveMenu,acti
     return (
         <div className={activeMenu == true ? classes.activeBurgerMenu : classes.burgerMenu} >
             <div className={classes.linksList}>
-                <div className={classes.burgerHeader}>{header}</div>
+                <div className={classes.burgerHeader}>Where to go next ?</div>
                 <ul>
                     {links.map(link => {
                             return (

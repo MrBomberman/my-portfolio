@@ -9,11 +9,11 @@
     transform: translateX(0);
     position: fixed;
     height: 100vh;
+    width: 100vw;
     top: 50px;
     right: 0;
     z-index: 50;
     transition: all 0.3s;
-    font-size: 18px;
 }
 .blur {
     width: 100vw;
@@ -28,8 +28,9 @@
     background-color: black;
     ul {
         list-style: none;
-        text-align: left;
+        text-align: center;
         padding: 20px;
+        
     }
     li:before {
         content: '- ';
