@@ -16,7 +16,7 @@ export default function BurgerMenu({header,links, activeMenu, setActiveMenu,acti
                     {links.map(link => {
                             return (
                             <li key={link}>
-                                <a href={`#${link}`} onClick={() => {
+                                <a href={`#${link.toLowerCase()}`} onClick={() => {
                                     setActiveMenu(false)
                                     activeTab.current.checked = false;
                                 }
