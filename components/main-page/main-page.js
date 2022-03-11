@@ -33,7 +33,7 @@ export default function MainPage(){
           <a href='#author'>KirIsakov.com</a></div>
         
         <div className={classes.navbar}>
-          <label for='burger' className={classes.menuIcon}
+          <label htmlFor='burger' className={classes.menuIcon}
            >
             <input id='burger' onClick={() => setActiveMenu(!activeMenu)} ref={burgerBtn}  className={classes.menuIcon__cheeckbox} type="checkbox" />
             <div>
