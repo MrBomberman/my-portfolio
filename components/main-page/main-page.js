@@ -7,13 +7,21 @@ import sliderImage from '../../assets/images/slider.jpg';
 import variables from '../../assets/images/variables.jpg';
 import gamePic from '../../assets/images/game.jpg';
 import BurgerMenu from './burgerMenu/burgerMenu';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 
 export default function MainPage(){
 
   const [activeMenu, setActiveMenu] = useState(false);
+  const [author, setAuthor] = useState('')
   const burgerBtn = useRef();
+
+  const authorText = useRef();
+
+  useEffect(() => {
+    // setAuthor('Hello! I am Kirill Isakov')
+    // authorText.current = author
+  },[])
 
 
   const items = ['About', 'Projects', 'Contact']
@@ -41,10 +49,13 @@ export default function MainPage(){
       </div>
       <section className={classes.welcomeSection} id='author'>
       <div className={classes.nameOfAuthor}>
-        <h1>Hello! I am Kirill Isakov</h1>
+        <h1 ref={authorText}>Hello! I am Kirill Isakov</h1>
         <p>Junior fronted-developer</p>
         </div>
       <div className={classes.bubbles}>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
+          <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>
           <div className={classes.bubble}></div>

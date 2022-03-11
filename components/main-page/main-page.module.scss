@@ -4,15 +4,15 @@
     font-size:calc(21px + 15 * ((100vw - 320px) / (1280 - 320)));;
 }
 .header {
-    background-color:  darkred;
-    background-color: #cc2936;
+    background-color: #1a1e23;
     margin: 0;
     display: flex;
     align-items: center;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     height: 65px;
+    border-radius: 0 0 25px 25px;
 }
 .navbar {
     display: flex;
@@ -95,7 +95,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: hsla(183, 94%, 76%, 0.3);
+      background: hsla(189, 20%, 93%, 0.3);
       border-radius: inherit;
       animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
     }
@@ -103,8 +103,8 @@
     @for $i from 0 through $bubble-count {
       &:nth-child(#{$i}) {
         --bubble-left-offset: #{random_range(0vw, 100vw)};
-        --bubble-radius: #{random_range(1vw, 10vw)};
-        --bubble-float-duration: #{random_range(6s, 12s)};
+        --bubble-radius: #{random_range(3vw, 10vw)};
+        --bubble-float-duration: #{random_range(6s, 10s)};
         --bubble-sway-duration: #{random_range(4s, 6s)};
         --bubble-float-delay: #{random_range(0s, 4s)};
         --bubble-sway-delay: #{random_range(0s, 4s)};
@@ -300,13 +300,14 @@
         bottom: 0;
         width: 22px;
         height: 12px;
+        z-index: 10;
     }
     span {
         position: absolute;
         display: block;
         width: 100%;
         height: 2px;
-        background-color: #000;
+        background-color: #fff;
         border-radius: 1px;
         transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 
@@ -344,11 +345,14 @@
     .author {
         width: 30%
     }
+    .about {
+        flex-direction: column;
+    }
     .navbar {
         width: 70%;
     }
     .info {
-        width: 50%;
+        width: 70%;
     }
     .welcomeSection h1 {
         font-size: 25px;
@@ -361,6 +365,9 @@
     }
     .menuIcon {
         display: block;
+    }
+    .info:nth-child(1){
+        text-align: center;
     }
     // .navMenuBtn:before {
     //     content: '';
