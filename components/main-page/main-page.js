@@ -33,14 +33,14 @@ export default function MainPage(){
           <a href='#author'>KirIsakov.com</a></div>
         
         <div className={classes.navbar}>
-          <div className={classes.menuIcon}
-          onClick={() => setActiveMenu(!activeMenu)}>
-            <input ref={burgerBtn} className={classes.menuIcon__cheeckbox} type="checkbox" />
+          <label for='burger' className={classes.menuIcon}
+           >
+            <input id='burger' onClick={() => setActiveMenu(!activeMenu)} ref={burgerBtn}  className={classes.menuIcon__cheeckbox} type="checkbox" />
             <div>
               <span></span>
               <span></span>
             </div>
-          </div>
+          </label>
         <a href='#about' >About</a>
         <a href='#projects'>Projects</a>
         <a href='#contact'>Contact</a>
