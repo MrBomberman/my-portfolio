@@ -104,7 +104,7 @@ export default function MainPage(){
       </section>
 
       <div id='about' className={classes.about}>
-        <div className={`${classes.info} ${classes.slideIn}`}>
+        <div className={`${classes.info} ${classes.slideIn} ${classes.imageAuthor}`}>
         <Image src={imageOfAuthor}
                 alt="Picture of the author"
                 width={400}

@@ -140,12 +140,15 @@
   }
 //   about section
 .about {
-    background-color: #cbc2c2;
+    background-color: #cbc2c21a;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 60vh;
     transition: all .5s;
+}
+.imageAuthor {
+    text-align: center;
 }
 .imageMain {
     border-radius: 50%;
@@ -159,7 +162,7 @@
    font-size: 0.9em;
 }
 .info p {
-    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    text-shadow: 4px 4px 4px rgba(150, 150, 150, 1);
     // transform: skew(-15deg);
     // padding: 10px;
     // background-color: #244b6b;
@@ -229,14 +232,14 @@
     background-color: #2e608a;
     padding: 15px;
     border-radius: 50%;
-    transition: all 1s;
+    transition: all .5s;
     box-shadow: 4px 4px 23px 0px rgba(140, 151, 159, 0.2);
     font-size: 15px;
     color: white;
 }
 .styleBtn:hover{
     background-color: #244b6b;
-    padding: 15px 80px;
+    font-size: 1.5rem;
 
 }
 .contact {
@@ -272,6 +275,7 @@
     padding: 2px;
 }
 .contactLinks div:hover{
+    font-size: 1.5rem;
     padding: 20px 20px 0 20px
 }
 
@@ -350,6 +354,7 @@
     }
     .about {
         flex-direction: column;
+        height: 100vh;
     }
     .navbar {
         width: 70%;
