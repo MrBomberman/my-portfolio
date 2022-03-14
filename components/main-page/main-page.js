@@ -13,15 +13,41 @@ import { useEffect, useRef, useState } from 'react';
 export default function MainPage(){
 
   const [activeMenu, setActiveMenu] = useState(false);
-  const [author, setAuthor] = useState('')
+  const [author, setAuthor] = useState('Hello! I am Kirill Isakov')
+  const [finalAuthor, setFinalAuthor] = useState('');
+  const [animationText, setAnimationText] = useState(true)
+  let numberOfLetters = 0;
   const burgerBtn = useRef();
-
   const authorText = useRef();
 
-  useEffect(() => {
-    // setAuthor('Hello! I am Kirill Isakov')
-    // authorText.current = author
-  },[])
+
+  function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  useEffect(async () => {
+    const arrOfLetters = author.split('')
+    if(numberOfLetters < arrOfLetters.length){
+      let string = ''
+      for (let i = 0; i < arrOfLetters.length; i++ ){
+        await timeout(120)
+        string = string + arrOfLetters[i]
+        numberOfLetters = numberOfLetters + 1;
+        setFinalAuthor(string)
+      }
+    }
+    if(numberOfLetters == arrOfLetters.length) {
+      await timeout(3000)
+      let string = author;
+      for (let i = arrOfLetters.length-1; i > 0; i-- ){
+        await timeout(120)
+        string = string.slice(0,i)
+        numberOfLetters = numberOfLetters - 1;
+        setFinalAuthor(string)
+      }
+    }
+    setAnimationText((animationText) => !animationText)
+  }, [numberOfLetters, animationText])
 
 
   const items = ['About', 'Projects', 'Contact']
@@ -49,7 +75,7 @@ export default function MainPage(){
       </div>
       <section className={classes.welcomeSection} id='author'>
       <div className={classes.nameOfAuthor}>
-        <h1 ref={authorText}>Hello! I am Kirill Isakov</h1>
+        <h1 ref={authorText}>{finalAuthor}</h1>
         <p>Junior fronted-developer</p>
         </div>
       <div className={classes.bubbles}>
