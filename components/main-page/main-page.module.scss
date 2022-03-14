@@ -99,7 +99,9 @@
       border-radius: inherit;
       animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
     }
-  
+    &:hover {
+        background: #fff;
+    }
     @for $i from 0 through $bubble-count {
       &:nth-child(#{$i}) {
         --bubble-left-offset: #{random_range(0vw, 100vw)};
