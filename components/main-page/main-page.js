@@ -19,12 +19,22 @@ export default function MainPage(){
   let numberOfLetters = 0;
   const burgerBtn = useRef();
   const authorText = useRef();
+  const mainElem = useRef();
 
 
   function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
+  // if burgerMenu is opened - overflowY is hidden
+  useEffect(() => {
+    const html = document.querySelector('html')
+    if(activeMenu == true){
+      html.style.overflowY = 'hidden'
+    } else {
+      html.style.overflowY = 'scroll'
+    }
+  }, [activeMenu])
+  // effect is showing the appearance of text in the main section - author
   useEffect(async () => {
     const arrOfLetters = author.split('')
     if(numberOfLetters < arrOfLetters.length){
@@ -53,7 +63,7 @@ export default function MainPage(){
   const items = ['About', 'Projects', 'Contact']
 
   return (
-    <div className={classes.mainClass}> 
+    <div className={classes.mainClass} ref={mainElem}> 
       <div className={classes.header}>
         <div className={classes.author}>
           <a href='#author'>KirIsakov.com</a></div>
@@ -115,6 +125,10 @@ export default function MainPage(){
           <p>My name is Kirill. I am from Moscow. Recently graduated from the Moscow State Linguistic University. I started doing web development more than a year ago, I am studying, creating my own projects, I have completed several courses. Now I am working as fronted dev in Delta Car.</p>
         </div>
       </div>
+      <div id='timeline' className={classes.timelineContainer}>
+
+      </div>
+      {/* need to put each project in its own component */}
       <div id='projects' className={classes.projects}>
           <h2>You can see some of my projects</h2>
           <div className={classes.projectsGrid}>
