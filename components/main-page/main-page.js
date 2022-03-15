@@ -8,6 +8,7 @@ import variables from '../../assets/images/variables.jpg';
 import gamePic from '../../assets/images/game.jpg';
 import BurgerMenu from './burgerMenu/burgerMenu';
 import { useEffect, useRef, useState } from 'react';
+import TimelineCard from './timelineCard';
 
 
 export default function MainPage(){
@@ -60,7 +61,7 @@ export default function MainPage(){
   }, [numberOfLetters, animationText])
 
 
-  const items = ['About', 'Projects', 'Contact']
+  const items = ['About', 'Timeline','Projects', 'Contact']
 
   return (
     <div className={classes.mainClass} ref={mainElem}> 
@@ -78,6 +79,7 @@ export default function MainPage(){
             </div>
           </label>
         <a href='#about' >About</a>
+        <a href='#timeline'>Timeline</a>
         <a href='#projects'>Projects</a>
         <a href='#contact'>Contact</a>
         </div>
@@ -126,7 +128,35 @@ export default function MainPage(){
         </div>
       </div>
       <div id='timeline' className={classes.timelineContainer}>
-
+        <h3 className={classes.timelineTitle}>Timeline</h3>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
+        <div className={classes.timelineSectionCard}>
+        <span className={classes.iconTimeline}>MSLU</span>
+        <TimelineCard/>
+        </div>
       </div>
       {/* need to put each project in its own component */}
       <div id='projects' className={classes.projects}>

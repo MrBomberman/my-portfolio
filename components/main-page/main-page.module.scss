@@ -341,6 +341,49 @@
         }
     }
 }
+// timeline section 
+.timelineTitle {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.timelineContainer {
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+.timelineSectionCard {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1.3em;
+    transition: all .5s;
+    .cardContent {
+        background-color: rgb(235, 235, 235);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 1px 3px 8px 1px rgb(141, 126, 126);
+        width: 40vw;
+        word-wrap: break-word;
+    }
+    .iconTimeline {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+.timelineSectionCard:nth-child(2n) {
+    justify-content: flex-start;
+    padding-left: 1.3em;
+    padding-right: 0px;
+
+    .cardContent {
+        box-shadow: -1px 3px 8px 1px rgb(141, 126, 126);
+    }
+}
+
 
 // .scrollContainer {
 //     scroll-behavior: smooth;
@@ -378,6 +421,23 @@
     }
     .info:nth-child(1){
         text-align: center;
+    }
+    .timelineSectionCard:nth-child(2n) {
+        justify-content: flex-start;
+        padding-left: 1em;
+    }
+    .timelineSectionCard {
+        justify-content: flex-start;
+        margin-top: 15px;
+        padding-left: 1em;
+        .cardContent {
+            width: 65vw;
+            display: block;
+            box-shadow: 0px 3px 8px 1px rgb(141, 126, 126);
+        }
+        .iconTimeline {
+            left: 90%;
+        }
     }
     // .navMenuBtn:before {
     //     content: '';
