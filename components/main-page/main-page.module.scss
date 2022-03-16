@@ -541,3 +541,9 @@
         }
     }
 }
+
+@media only screen and (max-height: 900px) {
+    .contact {
+        height: auto;
+    }
+}
