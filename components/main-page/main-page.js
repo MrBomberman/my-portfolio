@@ -129,48 +129,12 @@ export default function MainPage(){
       </div>
       <div id='timeline' className={classes.timelineContainer}>
         <h3 className={classes.timelineTitle}>Timeline</h3>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
           <TimelineCard/>
-        </div>
-        <div className={classes.timelineSectionCard}>
-          <span className={classes.iconTimeline}>
-            <svg></svg>
-          </span>
-          <TimelineCard/>
-        </div>
       </div>
       {/* need to put each project in its own component */}
       <div id='projects' className={classes.projects}>

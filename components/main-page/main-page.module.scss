@@ -402,6 +402,11 @@
     }
 }
 
+.iconTimelineAnimation {
+    animation: cd-bounce-1 .6s;
+    visibility: visible;
+}
+
 
 .timelineSectionCard:nth-child(2n) {
     justify-content: flex-start;
@@ -432,9 +437,6 @@
 }
 
 
-// .scrollContainer {
-//     scroll-behavior: smooth;
-// }
 
 // media ------------
 @media only screen and (max-width: 820px) {
@@ -495,30 +497,6 @@
     .timelineSectionCard:before {
         left: 90%;
     }
-    // .navMenuBtn:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     width: 30px;
-    //     background-color: #fff;
-    //     height: 2px;
-    // }
-    // .navMenuBtn:after {
-    //     content: '';
-    //     position: absolute;
-    //     bottom: 0;
-    //     width: 30px;
-    //     background-color: #fff;
-    //     height: 2px;
-    
-    // }
-    // .navMenuBtn span {
-    //     position: absolute;
-    //     top: 9px;
-    //     width: 30px;
-    //     background-color: #fff;
-    //     height: 2px;
-    // }
     .navbar > a {
         display: none;
     }
@@ -547,3 +525,17 @@
         height: auto;
     }
 }
+
+@keyframes cd-bounce-1 {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
