@@ -270,7 +270,7 @@
 }
 .contactLinks div {
     padding: 20px;
-    transition: 0.5s ease-out;
+    transition: 0.35s ease-out;
 }
 .fab {
     font-family: 'Font Awesome 5 Brands';
@@ -358,18 +358,47 @@
     justify-content: flex-end;
     padding-right: 1.3em;
     transition: all .5s;
+    margin: 1em 0;
     .cardContent {
-        background-color: rgb(235, 235, 235);
+        background-color: #fff;
         border-radius: 10px;
         padding: 10px;
         box-shadow: 1px 3px 8px 1px rgb(141, 126, 126);
         width: 40vw;
         word-wrap: break-word;
+        .description {
+            font-size: 0.7em;
+        }
+        .position {
+            font-size: 0.8em;
+        }
     }
     .iconTimeline {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        background: #2e608a;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .iconTimeline svg {
+        position: relative;
+        display: block;
+        height: 24px;
+        width: 24px;
+        margin-top: -12px;
+        margin-left: -12px;
+        top: 50%;
+        left: 50%;
+        background-color: red;
+    }
+    .period {
+        font-size: 0.7em;
+        color: rgb(199, 187, 187);
+        position: absolute;
+        top: 4px;
+        right: 55%;
     }
 }
 
@@ -382,6 +411,24 @@
     .cardContent {
         box-shadow: -1px 3px 8px 1px rgb(141, 126, 126);
     }
+    .period {
+        color: rgb(199, 187, 187);
+        position: absolute;
+        top: 4px;
+        left: 55%;
+        right: 0;
+    }
+}
+
+.timelineSectionCard:before {
+    content: '';
+    background: black;
+    width: 4px;
+    height: 133%;
+    background-image: linear-gradient(180deg,#fff 0,#1b1b1b 30px,#1b1b1b calc(100% - 30px),#fff);
+    position: absolute;
+    top: 0;
+    left: 50%;
 }
 
 
@@ -425,6 +472,9 @@
     .timelineSectionCard:nth-child(2n) {
         justify-content: flex-start;
         padding-left: 1em;
+        .period {
+            position: static;
+        }
     }
     .timelineSectionCard {
         justify-content: flex-start;
@@ -438,6 +488,12 @@
         .iconTimeline {
             left: 90%;
         }
+        .period {
+            position: static;
+        }
+    }
+    .timelineSectionCard:before {
+        left: 90%;
     }
     // .navMenuBtn:before {
     //     content: '';
@@ -465,5 +521,23 @@
     // }
     .navbar > a {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(160px ,1fr));
+    }
+    .timelineSectionCard {
+        .iconTimeline  {
+            width: 40px;
+            height: 40px;
+        }
+        .iconTimeline svg  {
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            margin-left: -8px;
+        }
     }
 }

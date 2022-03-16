@@ -7,13 +7,13 @@ export default function TimelineCard(){
                 <div>
                     Компания
                 </div>
-                <div>
+                <div className={classes.position}>
                     Должность(специальность)
                 </div>
-                <div>
+                <div className={classes.description}>
                     Краткое описание
                 </div>
-                <span>
+                <span className={classes.period}>
                     Период времени
                 </span>
             </div>
