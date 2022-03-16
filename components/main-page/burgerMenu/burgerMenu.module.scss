@@ -5,6 +5,7 @@
     right: 0;
     transform: translateX(100%);
     transition: all 0.3s;
+    z-index: 4;
 }
 .activeBurgerMenu {
     transform: translateX(0);
