@@ -154,7 +154,7 @@ export default function MainPage(){
           <TimelineCard period={'2021 october - now'} title={'Delta car'}
           position={'junior frontend dev'}
           descr={`After 4 months of practise I got my frist job as junoir frontend developer in swiss company Delta Car.
-          Now I'm support and wright new features for internal services to make the sale of cars more convenient for staff this company.`}
+          Now I'm supporting and writing new features for internal services to make the sale of car's more convenient for staff this company.`}
           />
       </div>
       {/* need to put each project in its own component */}
