@@ -6,10 +6,11 @@ export default function TimelineCard({period, title, position, descr}){
     const timelineCard = useRef();
     const iconTimelineRef = useRef();
     const cardContentRef = useRef();
+    const periodRef = useRef();
 
     const [offset, setOffset] = useState(0);
 
-    // const arrOfCards = []
+
     useEffect(() => {
         const onScroll = () => setOffset(window.pageYOffset);
 
@@ -23,11 +24,16 @@ export default function TimelineCard({period, title, position, descr}){
             cardContentRef.current.className = `${classes.cardContent} ${classes.cardContentAnimation}`
             iconTimelineRef.current.style.visibility = 'visible';
             cardContentRef.current.style.visibility = 'visible';
+            setTimeout(() => {
+                periodRef.current.style.visibility = 'visible' 
+            },1500)
         } else {
             iconTimelineRef.current.className = `${classes.iconTimeline}` 
             cardContentRef.current.className = `${classes.cardContent}`
             iconTimelineRef.current.style.visibility = 'hidden';
-            cardContentRef.current.style.visibility = 'hidden'
+            cardContentRef.current.style.visibility = 'hidden';
+            periodRef.current.style.visibility = 'hidden'
+
         }
 
         window.removeEventListener('scroll', onScroll);
@@ -53,7 +59,7 @@ export default function TimelineCard({period, title, position, descr}){
                     <div className={classes.description}>
                         {descr}
                     </div>
-                    <span className={classes.period}>
+                    <span ref={periodRef} className={classes.period}>
                         {period}
                     </span>
                 </div>
