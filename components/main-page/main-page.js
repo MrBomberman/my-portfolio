@@ -9,6 +9,7 @@ import gamePic from '../../assets/images/game.jpg';
 import BurgerMenu from './burgerMenu/burgerMenu';
 import { useEffect, useRef, useState } from 'react';
 import TimelineCard from './timelineCard';
+import ContactLink from './contactLink';
 
 
 export default function MainPage(){
@@ -201,21 +202,12 @@ export default function MainPage(){
         <h1>Let&rsquo;s create something together! </h1>
         <p>My contacts</p>
         <div className={classes.contactLinks}>
-          <div>
-          <Link href='https://t.me/MrBomberman' passHref={true}>
-            <Button><i className="fab fa-telegram"></i>Telegram</Button>
-          </Link>
-          </div>
-          <div>
-          <Link href='https://github.com/MrBomberman' passHref={true}>
-            <Button><i className="fab fa-github"></i>GitHub</Button>
-          </Link>
-          </div>
-          <div>
-          <Link href='https://twitter.com/Kirill98711794' passHref={true}>
-            <Button><i className="fab fa-twitter-square"></i>Twitter</Button>
-          </Link>
-          </div>
+          <ContactLink link={'https://t.me/MrBomberman'} classStyle={'fab fa-telegram'}
+          title={'Telegram'}/>
+          <ContactLink link={'https://github.com/MrBomberman'} classStyle={'fab fa-github'}
+          title={'GitHub'}/>
+          <ContactLink link={'https://twitter.com/Kirill98711794'} classStyle={'fab fa-twitter-square'}
+          title={'Twitter'}/>
         </div>
       </div>
     </div>
