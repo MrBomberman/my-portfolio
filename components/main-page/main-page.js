@@ -129,12 +129,32 @@ export default function MainPage(){
       </div>
       <div id='timeline' className={classes.timelineContainer}>
         <h3 className={classes.timelineTitle}>Timeline</h3>
-          <TimelineCard/>
-          <TimelineCard/>
-          <TimelineCard/>
-          <TimelineCard/>
-          <TimelineCard/>
-          <TimelineCard/>
+          <TimelineCard period={'2017 july'} title={'Entering the university'}
+          position={'student'}
+          descr={`This year I entered the Moscow state linguistic university. My profession was teaching foreign languages 
+          - english and french. I enjoyed learning everything first 2 years of studying`}/>
+          <TimelineCard period={'2020 march - 2020 august'} title={'First steps in programming'}
+          position={'student'}
+          descr={`The beginnig of this year I thought that I must change something in my life. That's why I entered on courses
+          of Python in Bauman State `}/>
+          <TimelineCard period={'2020 november - 2021 may'} title={'Beginning of web development'}
+          position={'student'}
+          descr={`Courses of python didn't impressed me a lot and I had an idea to try some other programming languages.
+          I found one course on Udemy which includes basic things of JavaScript and React. Also I finished few courses on platform freecodeCamp.`}/>
+          <TimelineCard period={'2021 june'} title={'Graduating from the university'}
+          position={'student'}
+          descr={`Finally, I finished University and got a bachelor degree in teaching English and French. And I got more time for porgramming, 
+          as I enjoyed it a lot. `}
+          />
+          <TimelineCard period={'2021 july - 2021 october'} title={'First working projects'}
+          position={'intern'}
+          descr={`At the end of july I tried to get my first job and after some interviews one of my familiar persons 
+          offered me to take part in some start up project as intern frontend developer.`}
+          />
+          <TimelineCard period={'2021 october - now'} title={'Delta car'}
+          position={`After 4 months of practise I got my frist job as junoir frontend developer in swiss company Delta Car.
+          Now I'm support and wright new features for internal services to make the sale of cars more convenient for staff this company.`}
+          />
       </div>
       {/* need to put each project in its own component */}
       <div id='projects' className={classes.projects}>

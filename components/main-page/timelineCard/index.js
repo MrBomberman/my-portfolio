@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import classes from '../main-page.module.scss'
 
-export default function TimelineCard(){
+export default function TimelineCard({period, title, position, descr}){
 
     const timelineCard = useRef();
     const iconTimelineRef = useRef();
@@ -17,9 +17,6 @@ export default function TimelineCard(){
         const slideBottom = timelineCard.current.offsetTop + timelineCard.current.clientHeight;
         const needToShow = slideAppearing > timelineCard.current.offsetTop;
         const isNotScrolledPast = (window.scrollY + 50) < slideBottom;
-        // arrOfCards.push(cardContentRef.current)
-        // console.log(arrOfCards)
-
 
         if(needToShow && isNotScrolledPast){
             iconTimelineRef.current.className = `${classes.iconTimeline} ${classes.iconTimelineAnimation}` 
@@ -48,16 +45,16 @@ export default function TimelineCard(){
             <div ref={cardContentRef} className={classes.cardContent}>
                 <div>
                     <div>
-                        Компания
+                        {title}
                     </div>
                     <div className={classes.position}>
-                        Должность(специальность)
+                        {position}
                     </div>
                     <div className={classes.description}>
-                        Краткое описание
+                        {descr}
                     </div>
                     <span className={classes.period}>
-                        Период времени
+                        {period}
                     </span>
                 </div>
             </div>
