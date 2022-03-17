@@ -371,6 +371,7 @@
         }
         .position {
             font-size: 0.8em;
+            color: rgb(39, 39, 182);
         }
     }
     .iconTimeline {
@@ -433,11 +434,11 @@
     }
 }
 
-.timelineSectionCard:before {
+.timelineSectionCard::before {
     content: '';
     background: black;
     width: 4px;
-    height: 133%;
+    height: 118%;
     background-image: linear-gradient(180deg,#fff 0,#1b1b1b 30px,#1b1b1b calc(100% - 30px),#fff);
     position: absolute;
     top: 0;
@@ -526,6 +527,11 @@
             margin-top: -8px;
             margin-left: -8px;
         }
+    }
+}
+@media only screen and (max-width: 460px) {
+    .timelineSectionCard::before {
+        height: 115%;
     }
 }
 
