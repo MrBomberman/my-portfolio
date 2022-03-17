@@ -382,7 +382,6 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        visibility: inherit;
     }
     .iconTimeline svg {
         position: relative;
@@ -406,17 +405,14 @@
 
 .iconTimelineAnimation {
     animation: cd-bounce-1 .6s;
-    visibility: visible;
 }
 
 .cardContentAnimation {
     animation: cd-bounce-2 .6s;
-    visibility: visible;
 }
 
 .cardContentAnimationInverse {
     animation: cd-bounce-2-inverse .6s;
-    visibility: visible;
 }
 
 

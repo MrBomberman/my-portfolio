@@ -24,9 +24,13 @@ export default function TimelineCard(){
         if(needToShow && isNotScrolledPast){
             iconTimelineRef.current.className = `${classes.iconTimeline} ${classes.iconTimelineAnimation}` 
             cardContentRef.current.className = `${classes.cardContent} ${classes.cardContentAnimation}`
+            iconTimelineRef.current.style.visibility = 'visible';
+            cardContentRef.current.style.visibility = 'visible';
         } else {
             iconTimelineRef.current.className = `${classes.iconTimeline}` 
             cardContentRef.current.className = `${classes.cardContent}`
+            iconTimelineRef.current.style.visibility = 'hidden';
+            cardContentRef.current.style.visibility = 'hidden'
         }
 
         window.removeEventListener('scroll', onScroll);
