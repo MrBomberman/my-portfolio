@@ -376,7 +376,8 @@
     .iconTimeline {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        margin-left: -30px;
+        // transform: translateX(-50%);
         background: #2e608a;
         width: 60px;
         height: 60px;
@@ -406,7 +407,9 @@
     animation: cd-bounce-1 .6s;
     visibility: visible;
 }
-
+.redClass {
+    color: red;
+}
 
 .timelineSectionCard:nth-child(2n) {
     justify-content: flex-start;
@@ -510,6 +513,7 @@
         .iconTimeline  {
             width: 40px;
             height: 40px;
+            margin-left: -20px;
         }
         .iconTimeline svg  {
             width: 16px;
