@@ -22,10 +22,7 @@ export default function TimelineCard(){
             iconTimelineRef.current.className = `${classes.iconTimeline}` 
         }
 
-        // clean up code
-        window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
     }, [offset]);
 
 
