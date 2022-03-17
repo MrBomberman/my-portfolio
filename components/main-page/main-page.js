@@ -10,6 +10,7 @@ import BurgerMenu from './burgerMenu/burgerMenu';
 import { useEffect, useRef, useState } from 'react';
 import TimelineCard from './timelineCard';
 import ContactLink from './contactLink';
+import ProjectCard from './projectCard';
 
 
 export default function MainPage(){
@@ -162,37 +163,9 @@ export default function MainPage(){
       <div id='projects' className={classes.projects}>
           <h2>You can see some of my projects</h2>
           <div className={classes.projectsGrid}>
-            <Link href='/sliders'>
-            <a className={classes.slideGrid}>
-              <Image src={sliderImage}
-                alt="Picture of the author"
-                width={400}
-                height={400}
-                className={classes.sliderImg}
-                />
-                <p className={classes.sliderDescr}>Sliders</p>
-              </a>
-              </Link>
-              <Link href='/game'>
-              <a className={classes.slideGrid}> 
-              <Image src={gamePic}
-                alt="Picture of the author"
-                width={400}
-                height={400}
-                className={classes.sliderImg}/>
-                <p className={classes.sliderDescr}>Game</p>
-              </a>
-              </Link>
-              <Link href='/js30'>
-              <a className={classes.slideGrid}>
-              <Image src={variables}
-                alt="Picture of the author"
-                width={400}
-                height={400}
-                className={classes.sliderImg}/>
-                <p className={classes.sliderDescr}>JS_30</p>
-              </a>
-              </Link>
+            <ProjectCard link={'/sliders'} title={'Sliders'} image={sliderImage}/>
+            <ProjectCard link={'/game'} title={'Game'} image={gamePic}/>
+            <ProjectCard link={'/js30'} title={'JS_30'} image={variables}/>
           </div>
           <Link href='/all-projects'>
           <a className={classes.styleBtn}>Show more</a>
