@@ -17,19 +17,21 @@ export default function TimelineCard(){
         const slideBottom = timelineCard.current.offsetTop + timelineCard.current.clientHeight;
         const needToShow = slideAppearing > timelineCard.current.offsetTop;
         const isNotScrolledPast = (window.scrollY + 50) < slideBottom;
-
+        // arrOfCards.push(cardContentRef.current)
+        // console.log(arrOfCards)
 
 
         if(needToShow && isNotScrolledPast){
             iconTimelineRef.current.className = `${classes.iconTimeline} ${classes.iconTimelineAnimation}` 
             cardContentRef.current.className = `${classes.cardContent} ${classes.cardContentAnimation}`
+        } else {
+            iconTimelineRef.current.className = `${classes.iconTimeline}` 
+            cardContentRef.current.className = `${classes.cardContent}`
         }
-        // else {
-        //     iconTimelineRef.current.className = `${classes.iconTimeline}` 
-        //     cardContentRef.current.className = `${classes.cardContent}`
-        // }
 
+        window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, [offset]);
 
 
