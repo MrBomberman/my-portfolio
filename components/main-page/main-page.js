@@ -134,11 +134,11 @@ export default function MainPage(){
           <TimelineCard period={'2017 july'} title={'Entering the university'}
           position={'student'}
           descr={`This year I entered the Moscow state linguistic university. My profession was teaching foreign languages 
-          - english and french. I enjoyed learning everything first 2 years of studying`}/>
+          - English and French. I enjoyed learning everything first 2 years of studying.`}/>
           <TimelineCard period={'2020 march - 2020 august'} title={'First steps in programming'}
           position={'student'}
           descr={`The beginnig of this year I thought that I must change something in my life. That's why I entered on courses
-          of Python in Bauman State `}/>
+          of Python in Bauman State university. `}/>
           <TimelineCard period={'2020 november - 2021 may'} title={'Beginning of web development'}
           position={'student'}
           descr={`Courses of python didn't impressed me a lot and I had an idea to try some other programming languages.
@@ -156,7 +156,7 @@ export default function MainPage(){
           <TimelineCard period={'2021 october - now'} title={'Delta car'}
           position={'junior frontend dev'}
           descr={`After 4 months of practise I got my frist job as junoir frontend developer in swiss company Delta Car.
-          Now I'm supporting and writing new features for internal services to make the sale of car's more convenient for staff this company.`}
+          Now I support and write new features for internal services to make the sale of car's more convenient for staff this company.`}
           />
       </div>
       {/* need to put each project in its own component */}
