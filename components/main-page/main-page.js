@@ -166,7 +166,7 @@ export default function MainPage(){
           <div className={classes.projectsGrid}>
             <ProjectCard link={'https://weather-forecast-app-lake.vercel.app/'} 
             title={'Weather forecast'} image={weatherImage}/>
-            <ProjectCard link={'/game'} title={'Game'} image={gamePic}/>
+            <ProjectCard link={'https://temperature-converter-website.vercel.app/'} title={'Temperature converter'} image={gamePic}/>
             <ProjectCard link={'/js30'} title={'JS_30'} image={variables}/>
           </div>
           <Link href='/all-projects'>
