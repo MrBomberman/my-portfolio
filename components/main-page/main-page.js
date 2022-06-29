@@ -6,6 +6,7 @@ import imageOfAuthor from '../../assets/images/personalblog.png';
 import sliderImage from '../../assets/images/slider.jpg';
 import variables from '../../assets/images/variables.jpg';
 import gamePic from '../../assets/images/game.jpg';
+import weatherImage from '../../assets/images/weather.png';
 import BurgerMenu from './burgerMenu/burgerMenu';
 import { useEffect, useRef, useState } from 'react';
 import TimelineCard from './timelineCard';
@@ -163,7 +164,8 @@ export default function MainPage(){
       <div id='projects' className={classes.projects}>
           <h2>You can see some of my projects</h2>
           <div className={classes.projectsGrid}>
-            <ProjectCard link={'/sliders'} title={'Sliders'} image={sliderImage}/>
+            <ProjectCard link={'https://weather-forecast-app-lake.vercel.app/'} 
+            title={'Weather forecast'} image={weatherImage}/>
             <ProjectCard link={'/game'} title={'Game'} image={gamePic}/>
             <ProjectCard link={'/js30'} title={'JS_30'} image={variables}/>
           </div>
